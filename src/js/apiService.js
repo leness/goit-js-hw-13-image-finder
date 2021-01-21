@@ -10,7 +10,6 @@ export default class NewsApiService {
 
     fetchGallery() {
         console.log(this);
-        // const key = `19306593-eb1bd0744257425a919db49fe`
         const url = `${BASE_URL}/api/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=${this.perpage}&key=${Api_KEY}`
         
         return fetch(url)
