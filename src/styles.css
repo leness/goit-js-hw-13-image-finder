@@ -8,12 +8,17 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-image: url('./images/bg-pattern.png');
+}
+
 .input-form {
   padding: 6px 15px;
   border-width: 3px;
   border-radius: 5px;
   margin: 20px;
   font-size: 30px;
+  background-color: rgb(230, 236, 175);
 }
 
 .search-form {
@@ -30,6 +35,7 @@ html {
   border-radius: 5px;
   margin-bottom: 20px;
   font-size: 30px;
+  background-color: rgb(230, 236, 175);
 }
 
 .button.is-hidden {

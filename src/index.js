@@ -22,6 +22,9 @@ function onSearch(evt) {
     evt.preventDefault();    
     newsApiService.query = evt.currentTarget.elements.query.value;
     
+    // if (hits < 12) {
+    //    hide()
+    // }
     loadMoreBtn.show();
     newsApiService.resetPage();
     clearHitsContainer();
@@ -39,7 +42,7 @@ function fetchHits() {
 function appendHitsMarkup(hits) {
     refs.galleryList.insertAdjacentHTML('beforeend', hitsTemplates(hits))
     window.scrollBy({
-  top: 100,
+  top: document.documentElement.scrollHeight,
   left: 100,
   behavior: 'smooth'
 });
@@ -48,4 +51,5 @@ function appendHitsMarkup(hits) {
 function clearHitsContainer() {
     refs.galleryList.innerHTML = '';
 }
+
 
